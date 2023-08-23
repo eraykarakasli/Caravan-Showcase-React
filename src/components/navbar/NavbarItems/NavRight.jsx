@@ -35,7 +35,7 @@ function NavRight() {
                             <a href="" className="flex hover:text-red-500  px-5 py-2">HAKKIMIZDA</a>
 
 
-                            <button onClick={toggleMenu} className='flex hover:text-red-500 px-5 py-2  items-center gap-10' >KARAVANLAR <AiOutlineDown/></button>
+                            <button onClick={toggleMenu} className='flex hover:text-red-500 px-5 py-2  items-center gap-20' >KARAVANLAR {isOpen ? <AiOutlineDown className='rotate-180'/> : <AiOutlineDown/> }</button>
                             {isOpen && (
                             <div className=" ">
                                 <a href="" className="block hover:text-red-600 px-5 py-2">Brüstner</a>
