@@ -9,7 +9,8 @@ function HomeSlider() {
     return (
         <div className='z-10 text-5xl font-semibold text-white  '>
             <Carousel
-                showIndicators={true} stopOnHover={true} autoFocus emulateTouch transitionTime={1000} showThumbs={false} infiniteLoop={true} showStatus={false} dynamicHeight={true}
+           
+                showIndicators={false} stopOnHover={true} autoPlay autoFocus emulateTouch transitionTime={1000} interval={3000} showThumbs={false} infiniteLoop={true} showStatus={false} dynamicHeight={true}
             >
                 <div className='grid grid-cols-1'>
                     <div className='hidden md:block '>
