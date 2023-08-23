@@ -18,7 +18,7 @@ function NavRight() {
     return (
         <div>
             <div className="xl:hidden text-white">
-                <button onClick={toggleDropdown} className="text-xl focus:outline-none hover:text-red-500">
+                <button onClick={toggleDropdown} className="text-xl focus:outline-none bg-red-600 p-1 px-2  hover:bg-red-500">
                     ☰
                 </button>
                 {isDropdownOpen && (

@@ -2,8 +2,8 @@ import React from 'react'
 
 function Sorting() {
     return (
-        <div className='w-[99%] absolute '>
-            <div className=' -mt-20 flex flex-wrap max-[1100px]:flex-col bg-[#1F1F1F] mx-10  '>
+        <div className='w-[99%] absolute  '>
+            <div className=' -mt-20 flex flex-wrap max-[1100px]:flex-col  max-[1100px]:items-center bg-[#1F1F1F] mx-10  '>
 
                 <div className='mx-10 h-40 w-1/4 '>
                     <p className='text-white pt-12 pb-8'>MARKA</p>
@@ -40,7 +40,7 @@ function Sorting() {
                         <span><hr /> </span>
                     </div>
 
-                    <button className='text-white  w-40 h-12 mt-8 mb-4 ml-10 text-[16px] px-7 duration-500   rounded-full font-semibold bg-red-600 hover:bg-transparent hover:text-red-600 border border-red-600 '>ARAMA YAP</button>
+                    <button className='text-white  w-40 h-12 mt-8 mb-8 ml-10 text-[16px] px-7 duration-500   rounded-full font-semibold bg-red-600 hover:bg-transparent hover:text-red-600 border border-red-600 '>ARAMA YAP</button>
 
                 
             </div>
