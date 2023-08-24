@@ -1,13 +1,15 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
-import HomeSlider from '../components/slider/HomeSlider'
-import ProductSlider from '../components/slider/ProductSlider'
-import Sorting from '../components/sorting/Sorting'
-import Luxury from '../components/luxury/Luxury'
+import HomeSlider from '../components/HomeComp/slider/HomeSlider'
+import ProductSlider from '../components/HomeComp/slider/ProductSlider'
+import Sorting from '../components/HomeComp/sorting/Sorting'
+import Luxury from '../components/HomeComp/luxury/Luxury'
+import TestimonialSlider from '../components/HomeComp/slider/TestimonialSlider'
+import VideoSlider from '../components/HomeComp/slider/VideoSlider'
 
 function Home() {
   return (
-    <div className='bg-[#121212] h-[3000px]'>
+    <div className='bg-[#121212] h-[4500px]'>
         <Navbar/>
         <div className=''> 
         <HomeSlider/>
@@ -15,6 +17,8 @@ function Home() {
         </div>
         <ProductSlider/>
         <Luxury/>
+        <TestimonialSlider/>
+        <VideoSlider/>
     </div>
   )
 }

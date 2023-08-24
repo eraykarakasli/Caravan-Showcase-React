@@ -13,8 +13,8 @@ function SocialMedia() {
                 <a href=""><BiLogoFacebook color='white' /> </a>
             </div>
             <div className='flex gap-8 text-white'>
-                <a className='flex items-center gap-2 text-xs font-semibold' href=""><BsTelephone size={12} color='white'/> 0(530) 832 87 71</a>
-                <a className='flex items-center gap-2 text-xs font-semibold' href=""><AiOutlineMail size={15} color='white'/>info@ucaravan.com.tr</a>
+                <a className='flex items-center gap-2 text-xs font-semibold' href=""><BsTelephone size={12} color='white'/> 0(000) 000 00 00</a>
+                <a className='flex items-center gap-2 text-xs font-semibold' href=""><AiOutlineMail size={15} color='white'/>info@admin.com.tr</a>
             </div>
         </div>
     )

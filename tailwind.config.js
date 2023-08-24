@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'home': "url(https://www.tracker.co.uk/application/files/1315/4867/2671/caravan-banner.jpg)",
+      },
+    },
   },
   plugins: [],
 }
