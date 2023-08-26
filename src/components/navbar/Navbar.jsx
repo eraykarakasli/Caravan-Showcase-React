@@ -24,7 +24,7 @@ function Navbar() {
         <div className=''>
             <SocialMedia />
             <div className={`${isScrolled ? ' top-0 duration-500 transition-all' : ' '
-            } flex  z-30  fixed justify-between bg-black h-28 px-20 items-center w-full`}>
+            } flex  z-30  fixed justify-between bg-black h-28 px-52 items-center w-full  `}>
                 <NavLeft />
                 <NavRight />
             </div>

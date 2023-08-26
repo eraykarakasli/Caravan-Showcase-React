@@ -37,9 +37,9 @@ function ProductSlider() {
   };
 
   return (
-    <div className='h-80 text-white mt-80  max-[1100px]:mt-[600px] relative'>
+    <div className='h-80 text-white mt-[300px] max-[1700px]:mt-[600px] relative w-[80%] left-1/2 transform -translate-x-1/2'>
       {/* divider */}
-      <div className='items-center flex absolute top-[108px] -left-16 text-lg rotate-90'>
+      <div className='items-center flex  absolute top-[108px] -left-16 text-lg rotate-90'>
         <span className='pr-1  text-2xl font-semibold text-white'>KARAVANLAR</span>
         <span className='h-1 w-20 bg-red-800' />
       </div>
@@ -51,7 +51,7 @@ function ProductSlider() {
         </div>
       </div>
 
-      <div className='ml-40'>
+      <div className='ml-40 '>
         {slider ?
           <Carousel draggable={true} swipeable={true} infinite={true} autoPlay={true} autoPlaySpeed={10000} responsive={responsive}>
             <div>
