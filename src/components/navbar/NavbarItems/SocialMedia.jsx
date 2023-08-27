@@ -6,7 +6,8 @@ import { AiOutlineMail } from 'react-icons/ai'
 
 function SocialMedia() {
     return (
-        <div className='w-[80%] relative left-1/2 transform -translate-x-1/2'>
+        <div className='bg-[#232323]'>
+            <div className='w-[80%]  relative left-1/2 transform -translate-x-1/2'>
             <div className=' flex justify-between px-8 h-10 items-center '>
                 <div className='flex gap-5'>
                     <a href=""><BiLogoInstagram size={16} color="white" /></a>
@@ -19,6 +20,8 @@ function SocialMedia() {
                 </div>
             </div>
         </div>
+        </div>
+        
     )
 }
 
