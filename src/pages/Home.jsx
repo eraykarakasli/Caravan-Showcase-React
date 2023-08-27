@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/navbar/Navbar'
 import HomeSlider from '../components/HomeComp/slider/HomeSlider'
 import ProductSlider from '../components/HomeComp/slider/ProductSlider'
@@ -10,6 +10,10 @@ import Footer from '../components/footer/Footer'
 import ContentWrapper from '../wrapper/ContentWrapper'
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Anasayfa - O CARAVAN';
+   
+  }, []);
   return (
     <div className='bg-[#121212] '>
       <Navbar />

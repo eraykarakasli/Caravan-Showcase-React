@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import {AiOutlineDown} from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom';
 
 
 function NavRight() {
+    const navigate = useNavigate();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -31,11 +33,11 @@ function NavRight() {
                             </a>
                         </div>
                         <div className='grid place-items-start mt-6'>
-                            <a href="" className="flex hover:text-red-500  px-5 py-2">ANASAYFA</a>
-                            <a href="" className="flex hover:text-red-500  px-5 py-2">HAKKIMIZDA</a>
+                            <a onClick={()=>navigate("/")} href="" className="flex hover:text-red-500  px-5 py-2">ANASAYFA</a>
+                            <a  className="flex hover:text-red-500  px-5 py-2">HAKKIMIZDA</a>
 
 
-                            <button onClick={toggleMenu} className='flex hover:text-red-500 px-5 py-2  items-center gap-20' >KARAVANLAR {isOpen ? <AiOutlineDown className='rotate-180'/> : <AiOutlineDown/> }</button>
+                            <button onClick={toggleMenu} className='flex hover:text-red-500 px-5 py-2  items-center gap-20' ><a onClick={()=>navigate('/karavanlar')} href="">KARAVANLAR </a>{isOpen ? <AiOutlineDown className='rotate-180'/> : <AiOutlineDown/> }</button>
                             {isOpen && (
                             <div className=" ">
                                 <a href="" className="block hover:text-red-600 px-5 py-2">Brüstner</a>
@@ -53,10 +55,10 @@ function NavRight() {
             </div>
             <div className='max-[1280px]:hidden  text-gray-400 flex gap-16 text-sm font-bold h-28 items-center'>
 
-                <a className='text-red-500' href="">ANASAYFA</a>
+                <a className='text-red-500' onClick={()=>navigate('/')}>ANASAYFA</a>
                 <a className='hover:text-red-500 duration-300' href="">HAKKIMIZDA</a>
                 <div className="relative z-30 group h-full w-full flex items-center hover:text-red-500 duration-500">
-                    <a className='hover:text-red-500 duration-500 focus:outline-none ' href="">KARAVANLAR</a>
+                    <a className='hover:text-red-500 duration-500 focus:outline-none ' onClick={()=>navigate('/karavanlar')} href="">KARAVANLAR</a>
                     <div className="absolute hidden group-hover:block text-gray-400 top-28  bg-black border border-gray-300 border-t-red-500 rounded-md shadow-md py-2 w-48">
                         <a href="#" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Brüstner</a>
                         <a href="#" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Fendt - Caravan</a>
