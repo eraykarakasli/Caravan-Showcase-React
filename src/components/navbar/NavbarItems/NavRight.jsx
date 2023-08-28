@@ -40,10 +40,10 @@ function NavRight() {
                             <button onClick={toggleMenu} className='flex hover:text-red-500 px-5 py-2  items-center gap-20' ><a onClick={()=>navigate('/karavanlar')} href="">KARAVANLAR </a>{isOpen ? <AiOutlineDown className='rotate-180'/> : <AiOutlineDown/> }</button>
                             {isOpen && (
                             <div className=" ">
-                                <a href="" className="block hover:text-red-600 px-5 py-2">Brüstner</a>
-                                <a href="" className="block hover:text-red-600 px-5 py-2">Fendt - Caravan</a>
-                                <a href="" className="block hover:text-red-600 px-5 py-2">Hymer / Eriba</a>
-                                <a href="" className="block hover:text-red-600 px-5 py-2">KABE</a>
+                                <a onClick={()=> navigate('/karavanlar/burstner')} href="" className="block hover:text-red-600 px-5 py-2">Brüstner</a>
+                                <a onClick={()=> navigate('/karavanlar/fendt-caravan')} href="" className="block hover:text-red-600 px-5 py-2">Fendt - Caravan</a>
+                                <a onClick={()=> navigate('/karavanlar/hymer-eriba')} href="" className="block hover:text-red-600 px-5 py-2">Hymer / Eriba</a>
+                                <a onClick={()=> navigate('/karavanlar/kabe')} href="" className="block hover:text-red-600 px-5 py-2">KABE</a>
                             </div>
                             )}
 
@@ -60,10 +60,10 @@ function NavRight() {
                 <div className="relative z-30 group h-full w-full flex items-center hover:text-red-500 duration-500">
                     <a className='hover:text-red-500 duration-500 focus:outline-none ' onClick={()=>navigate('/karavanlar')} href="">KARAVANLAR</a>
                     <div className="absolute hidden group-hover:block text-gray-400 top-28  bg-black border border-gray-300 border-t-red-500 rounded-md shadow-md py-2 w-48">
-                        <a href="#" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Brüstner</a>
-                        <a href="#" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Fendt - Caravan</a>
-                        <a href="#" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Hymer / Eriba</a>
-                        <a href="#" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">KABE</a>
+                        <a onClick={()=> navigate('/karavanlar/burstner')} href="" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Brüstner</a>
+                        <a onClick={()=> navigate('/karavanlar/fendt-caravan')} href="" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Fendt - Caravan</a>
+                        <a onClick={()=> navigate('/karavanlar/hymer-eriba')} href="" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">Hymer / Eriba</a>
+                        <a onClick={()=> navigate('/karavanlar/kabe')} href="" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">KABE</a>
                     </div>
                 </div>
                 <a onClick={()=>navigate('/iletisim')} className='hover:text-red-500 duration-500' href="">İLETİŞİM</a>
