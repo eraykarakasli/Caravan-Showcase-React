@@ -21,15 +21,29 @@ function Navbar() {
         };
     }, []);
     return (
-        <div className=''>
-            <SocialMedia />
-            <div className={`${isScrolled ? ' top-0 duration-500 transition-all' : ' '
-            } flex  z-30  fixed justify-between bg-black h-28 px-52 items-center w-full  `}>
-                <NavLeft />
-                <NavRight />
-            </div>
+        <>
+            {isScrolled ?
+                <div className=''>
 
-        </div>
+                    <div className={`${isScrolled ? ' top-0 duration-500 transition-all' : ' '
+                        } flex  z-30  fixed justify-between bg-black h-28 px-52 items-center w-full  `}>
+                        <NavLeft />
+                        <NavRight />
+                    </div>
+
+                </div> :
+                <div>
+                    <SocialMedia />
+                    <div className={`${isScrolled ? ' top-0 duration-500 transition-all' : ' '
+                        } flex  z-30  fixed justify-between bg-black h-28 px-52 items-center w-full  `}>
+                        <NavLeft />
+                        <NavRight />
+                    </div> </div>
+
+
+
+            }
+        </>
     )
 }
 

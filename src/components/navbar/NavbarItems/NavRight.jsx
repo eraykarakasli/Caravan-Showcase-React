@@ -34,7 +34,7 @@ function NavRight() {
                         </div>
                         <div className='grid place-items-start mt-6'>
                             <a onClick={()=>navigate("/")} href="" className="flex hover:text-red-500  px-5 py-2">ANASAYFA</a>
-                            <a  className="flex hover:text-red-500  px-5 py-2">HAKKIMIZDA</a>
+                            <a onClick={()=>navigate('/hakkimizda')}  className="flex hover:text-red-500  px-5 py-2">HAKKIMIZDA</a>
 
 
                             <button onClick={toggleMenu} className='flex hover:text-red-500 px-5 py-2  items-center gap-20' ><a onClick={()=>navigate('/karavanlar')} href="">KARAVANLAR </a>{isOpen ? <AiOutlineDown className='rotate-180'/> : <AiOutlineDown/> }</button>
@@ -48,7 +48,7 @@ function NavRight() {
                             )}
 
 
-                            <a href="#" className="flex hover:text-red-500 px-5 py-2">İLETİŞİM</a>
+                            <a href="#" onClick={()=>navigate('/iletisim')} className="flex hover:text-red-500 px-5 py-2">İLETİŞİM</a>
                         </div>
                     </div>
                 )}
@@ -56,7 +56,7 @@ function NavRight() {
             <div className='max-[1280px]:hidden  text-gray-400 flex gap-16 text-sm font-bold h-28 items-center'>
 
                 <a className='text-red-500' onClick={()=>navigate('/')}>ANASAYFA</a>
-                <a className='hover:text-red-500 duration-300' href="">HAKKIMIZDA</a>
+                <a className='hover:text-red-500 duration-300' onClick={()=>navigate('/hakkimizda')} href="">HAKKIMIZDA</a>
                 <div className="relative z-30 group h-full w-full flex items-center hover:text-red-500 duration-500">
                     <a className='hover:text-red-500 duration-500 focus:outline-none ' onClick={()=>navigate('/karavanlar')} href="">KARAVANLAR</a>
                     <div className="absolute hidden group-hover:block text-gray-400 top-28  bg-black border border-gray-300 border-t-red-500 rounded-md shadow-md py-2 w-48">
@@ -66,7 +66,7 @@ function NavRight() {
                         <a href="#" className="block px-4 py-4 hover:bg-gray-800 hover:text-white">KABE</a>
                     </div>
                 </div>
-                <a className='hover:text-red-500 duration-500' href="">İLETİŞİM</a>
+                <a onClick={()=>navigate('/iletisim')} className='hover:text-red-500 duration-500' href="">İLETİŞİM</a>
 
             </div>
         </div>
