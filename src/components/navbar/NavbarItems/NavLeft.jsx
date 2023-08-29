@@ -5,7 +5,7 @@ function NavLeft() {
  
   return (
     <div >
-        <a href='#' className='text-5xl divide-x flex cursor-pointer'>
+        <a href='/' className='text-5xl divide-x flex cursor-pointer'>
             <span className='text-red-600 px-2 font-semibold'>O</span>
             <span className='text-gray-200 px-2'>CARAVAN</span>
         </a>

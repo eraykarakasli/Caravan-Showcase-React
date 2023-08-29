@@ -110,7 +110,7 @@ function FormContact() {
 
                         <button
                             type="submit"
-                            className=' z-30 bg-red-600 mt-10  text-[16px] px-9 duration-500  p-4 rounded-full font-semibold hover:bg-transparent text-white hover:text-red-600 border border-red-600 '
+                            className=' z-30 bg-red-600 mt-10 cursor-pointer  text-[16px] px-9 duration-500  p-4 rounded-full font-semibold hover:bg-transparent text-white hover:text-red-600 border border-red-600 '
                             disabled={!dirty || isSubmitting}
 
                         >GÖNDER</button>

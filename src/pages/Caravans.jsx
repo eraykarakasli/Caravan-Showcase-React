@@ -8,6 +8,7 @@ function SubPage() {
   useEffect(() => {
     document.title = 'Karavanlar - O CARAVAN';
   }, []);
+  
 
   return (
     <div>

@@ -35,7 +35,7 @@ function TestimonialSlider() {
                         <p className='text-white text-2xl font-semibold'>MÜŞTERİ YORUMLARI</p>
                     </div>
                     <div className='-mt-16'>
-                        <Carousel arrows={true} draggable={false} swipeable={false} infinite={true} autoPlay={true} autoPlaySpeed={10000} responsive={responsive}>
+                        <Carousel arrows={true} draggable={false} swipeable={false} infinite={true} autoPlay={true} autoPlaySpeed={8000} responsive={responsive}>
                             <div className='flex h-[500px] items-center'>
                                 <div className='mx-12'><ImQuotesLeft size={50} /></div>
                                 <div className=''>

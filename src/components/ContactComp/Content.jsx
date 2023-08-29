@@ -19,10 +19,10 @@ function Content() {
 
             <div className='w-full  flex  p-40 text-white justify-center gap-20'>
                 <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1885.8395951677846!2d28.53784513897761!3d41.001834716971295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b5677e719a3885%3A0xc431befcb21106b1!2zQsO8ecO8ayBVbHUgw5ZuZGVyIEdhemkgTXVzdGFmYSBLZW1hbCBBdGF0w7xyayBQYXJrxLE!5e1!3m2!1str!2str!4v1693224310765!5m2!1str!2str" width="500" height="500" ></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1885.8395951677846!2d28.53784513897761!3d41.001834716971295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b5677e719a3885%3A0xc431befcb21106b1!2zQsO8ecO8ayBVbHUgw5ZuZGVyIEdhemkgTXVzdGFmYSBLZW1hbCBBdGF0w7xyayBQYXJrxLE!5e1!3m2!1str!2str!4v1693224310765!5m2!1str!2str" width="500" height="500" ></iframe>
                 </div>
                 <div>
-                       <FormContact/>
+                    <FormContact />
                 </div>
             </div>
         </div>

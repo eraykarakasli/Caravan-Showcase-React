@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiGrid } from 'react-icons/fi'
 import { AiOutlineBars } from 'react-icons/ai'
 import { GiCaravan } from 'react-icons/gi'
+import { FaBed } from 'react-icons/fa'
 
 
 function Brand({ name, count, categories }) {
+    const [aspect, setAspect] = useState(true);
+    const [color, setColor] = useState("text-red-700 border-red-600")
+    const [color2, setColor2] = useState("text-white")
+    const toggleGrid = () => {
+        setAspect(true)
+        setColor("text-red-700 border-red-600")
+    }
+    const toggleLine = () => {
+        setAspect(false)
+        setColor2("text-red-700 border-red-600")
+    }
+    useEffect(() => {
+        if (!aspect) {
+            setColor("text-white")
+        } else {
+            setColor2("text-white")
+        }
+    }, [aspect])
+
     return (
         <div className='bg-[#121212] h-auto relative'>
             <div className='bg-caravan bg-center bg-no-repeat h-[478px] mt-28   w-auto'>
@@ -27,24 +47,87 @@ function Brand({ name, count, categories }) {
                             <GiCaravan size={40} /> <div className='font-semibold'> {count} Karavan Bulundu</div>
                         </div>
                         <div className='flex gap-3 '>
-                            <button className='hover:text-red-600 hover:border-red-600 border rounded-sm'>  <FiGrid className=' w-10 h-8 p-1.5' /></button>
-                            <button className='hover:text-red-600 hover:border-red-600 border rounded-sm'><AiOutlineBars className=' w-10 h-10 p-2' /></button>
+                            <button onClick={toggleGrid} className={`${color} border rounded-sm`}>  <FiGrid className=' w-10 h-8 p-1.5' /></button>
+                            <button onClick={toggleLine} className={`${color2} border rounded-sm`}><AiOutlineBars className=' w-10 h-10 p-2' /></button>
                         </div>
                     </div>
 
 
                     <div className='w-full  h-auto mt-20'>
                         {
-                            categories.map((category, index) => (
-                                <div key={index}>
-                                    <div className='text-xl'>
-                                        {category}
-                                        <div className='w-10 bg-red-800 h-1 rounded-full'></div>
-                                    </div>
-                                </div>
-                            ))
-                        }
+                            aspect ? <>
+                                {
+                                    categories.map((category, index) => (
+                                        <div key={index}>
+                                            <div className='text-xl mt-10'>
+                                                {category[0]?.name}
+                                                <div className='w-10 bg-red-800 h-1 rounded-full'></div>
+                                                <div className='grid grid-cols-2 max-[1650px]:grid-cols-1'>
+                                                    {
+                                                        category.map((feature, i) => (
+                                                            <div key={i} className='border border-gray-600 w-[95%]  mt-10 '>
+                                                                <div className='h-[160px]'>
+                                                                    <img className='h-full w-full' src={feature?.img} alt="" />
+                                                                </div>
+                                                                <div className='h-[160px]'>
+                                                                    <div className='text-xl font-semibold m-4 p-2 border-b border-gray-500'>
+                                                                        {feature?.model}
+                                                                    </div>
+                                                                    <div className=' mx-7 flex items-center gap-8 text-sm'>
+                                                                        <div className='flex items-center gap-2'> <FaBed size={24} /> {feature?.capacity} Kişilik</div>
+                                                                        <div className='flex items-center gap-2'><GiCaravan size={28} /> {feature?.weight} Kg</div>
+                                                                    </div>
+                                                                    <div className='font-bold m-6 text-xl text-red-700'>
+                                                                        {feature?.price} €
+                                                                    </div>
+                                                                </div>
 
+
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                }</> :
+                                <>
+                                    {
+                                        categories.map((category, index) => (
+                                            <div key={index}>
+                                                <div className='text-xl mt-10'>
+                                                    {category[0]?.name}
+                                                    <div className='w-10 bg-red-800 h-1 rounded-full'></div>
+                                                    <div className='grid grid-cols-1 '>
+                                                        {
+                                                            category.map((feature, i) => (
+                                                                <div key={i} className='border border-gray-600 w-[95%]  mt-10 flex max-[1200px]:flex-col'>
+                                                                    <div className='h-[180px] w-auto max-w-[350px]'>
+                                                                        <img className='h-auto w-[100%] ' src={feature?.img} alt="" />
+                                                                    </div>
+                                                                    <div className='h-[160px] max-[1200px]:h-[180px] max-[1200px]:w-auto'>
+                                                                        <div className='text-xl font-semibold m-4 p-2 '>
+                                                                            {feature?.model}
+                                                                        </div>
+                                                                        <div className=' mx-7 flex items-center text-sm'>
+                                                                            <div className='flex items-center w-1/2  gap-2'> <FaBed size={24} /> {feature?.capacity} Kişilik</div>
+                                                                            <div className='flex items-center w-1/2  gap-2'><GiCaravan size={28} /> {feature?.weight} Kg</div>
+                                                                        </div>
+                                                                        <div className='font-bold m-6 mx-10  text-xl text-red-700'>
+                                                                            {feature?.price} €
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            ))
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }</>
+                        }
                     </div>
 
 

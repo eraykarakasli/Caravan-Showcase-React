@@ -55,7 +55,7 @@ function NavRight() {
             </div>
             <div className='max-[1280px]:hidden  text-gray-400 flex gap-16 text-sm font-bold h-28 items-center'>
 
-                <a className='text-red-500' onClick={()=>navigate('/')}>ANASAYFA</a>
+                <a className='text-red-500 cursor-pointer' onClick={()=>navigate('/')}>ANASAYFA</a>
                 <a className='hover:text-red-500 duration-300' onClick={()=>navigate('/hakkimizda')} href="">HAKKIMIZDA</a>
                 <div className="relative z-30 group h-full w-full flex items-center hover:text-red-500 duration-500">
                     <a className='hover:text-red-500 duration-500 focus:outline-none ' onClick={()=>navigate('/karavanlar')} href="">KARAVANLAR</a>
